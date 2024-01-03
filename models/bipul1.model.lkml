@@ -9,7 +9,7 @@ include: "/views/**/*.view"
 
 datagroup: bipul1_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "2 hour"
+  max_cache_age: "3 hour"
 }
 
 persist_with: bipul1_default_datagroup
@@ -35,7 +35,25 @@ explore: employee {
 
 explore: department {}
 
+# explore: employee_data {
+#   join: employee {
+#     type: left_outer
+#     sql_on: ${employee_data.employee_id} = ${employee.employee_id} ;;
+#     relationship: many_to_one
+#   }
+
+#   join: department {
+#     type: left_outer
+#     sql_on: ${employee.department_id} = ${department.department_id} ;;
+#     relationship: many_to_one
+#   }
+# }
+
 explore: employee_data {
+  query:  testquery{
+    dimensions: [department.department_id,department.department_name]
+    label: "Display Name in Field Picker"
+  }
   join: employee {
     type: left_outer
     sql_on: ${employee_data.employee_id} = ${employee.employee_id} ;;
@@ -48,6 +66,7 @@ explore: employee_data {
     relationship: many_to_one
   }
 }
+
 
 explore: links2 {
   join: links2__sort_keys {
