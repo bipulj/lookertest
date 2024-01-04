@@ -22,11 +22,11 @@ persist_with: bipul1_default_datagroup
 # To see the Explore you’re building, navigate to the Explore menu and select an Explore under "Bipul1"
 
 explore: employee {
-  join: department {
-    type: left_outer
-    sql_on: ${employee.department_id} = ${department.department_id} ;;
-    relationship: many_to_one
-  }
+  # join: department {
+  #   type: left_outer
+  #   sql_on: ${employee.department_id} = ${department.department_id} ;;
+  #   relationship: many_to_one
+  # }
 }
 
 # To create more sophisticated Explores that involve multiple views, you can use the join parameter.
