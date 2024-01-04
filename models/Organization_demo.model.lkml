@@ -31,7 +31,7 @@ explore: department {}
 explore: employee {
   query:  testquery{
     dimensions: [department.department_id,department.department_name,employee.first_name,employee.last_name]
-    label: "Display Employee Name and Department name in Field Picker"
+    label: "Display Employee Name and Department name in Field Picker."
   }
   query:  testquery2{
     dimensions: [department.department_id,department.department_name,employee.first_name,employee.last_name]
