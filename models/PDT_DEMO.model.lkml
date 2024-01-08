@@ -19,24 +19,4 @@ include: "/views/*.view.lkml"                # include all views in the views/ f
 #   }
 # }
 
-datagroup: bipul_test_default_datagroup {
-  # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "3 hour"
-}
-
-persist_with: bipul_test_default_datagroup
-
-explore: department {}
-
-explore: employee {
-  query:  testquery{
-    dimensions: [employee.first_name,employee.last_name]
-    label: "Filter on Department ID"
-    filters: [employee.department_id: "10"]
-  }
-  query:  testquery2{
-    dimensions: [employee.first_name,employee.last_name]
-    label: "Display Employee Name and Department name in Field Picker."
-
-  }
-}
+explore: employee_count_by_job_id {}
