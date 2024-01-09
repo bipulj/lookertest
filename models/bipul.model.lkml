@@ -18,3 +18,5 @@ include:  "/views/employee.view.lkml"
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
+explore: department {}
+explore: employee {}
