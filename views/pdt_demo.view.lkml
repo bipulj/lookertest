@@ -1,4 +1,3 @@
-
 datagroup: dg_employee_count_by_job_id {
   sql_trigger: SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
   #max_cache_age: "2 minutes"
