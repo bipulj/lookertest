@@ -1,16 +1,16 @@
 
-datagroup: dg_employee_count_by_job_id {
-  sql_trigger: SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
-  #max_cache_age: "2 minutes"
-}
+# datagroup: dg_employee_count_by_job_id {
+#   sql_trigger: SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
+#   #max_cache_age: "2 minutes"
+# }
 
 view: employee_count_by_job_id {
   derived_table: {
 
-     datagroup_trigger:dg_employee_count_by_job_id
+     #datagroup_trigger:dg_employee_count_by_job_id
     #increment_key: "HIRE_DATE"
 
-     #sql_trigger_value:SELECT max(employee_id) FROM `projecttwo-365317.dataset_in_us.employee`;;
+     sql_trigger_value:SELECT max(employee_id) FROM `projecttwo-365317.dataset_in_us.employee`;;
     sql: SELECT
         EMPLOYEE_ID AS EMPLOYEE_ID,
         JOB_ID AS JOB_ID,
