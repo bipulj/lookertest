@@ -21,21 +21,24 @@ view: Students {
 
 }
 
-view: Bipul_class {
-  extends: [Students]
-
-  dimension: Class {
+view: ClassTeacher {
+  dimension: ClassTeacherName {
     type: string
-    sql: "10";;
-  }
-  dimension: Section {
-    type: string
-    sql: "A" ;;
+    sql: "Vinita Arora" ;;
   }
 }
 
-view: Tariq_class {
-  extends: [Bipul_class]
+view: Class {
+  extends: [Students]
+
+  dimension: Class {
+    type: number
+    sql: 10;;
+  }
+}
+
+view: Section {
+  extends: [Students]
 
   dimension: Section {
     type: string
