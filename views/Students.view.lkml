@@ -38,3 +38,13 @@ view: Section {
     sql: "A" ;;
   }
 }
+
+view: ClassTeacher {
+
+  extends: [Students]
+
+  dimension: ClassTeacherName {
+    type: string
+    sql: "Vinita Arora" ;;
+  }
+}
