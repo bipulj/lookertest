@@ -35,6 +35,6 @@ view: Section {
 
   dimension: Section {
     type: string
-    sql: "B" ;;
+    sql: "A" ;;
   }
 }
