@@ -1,8 +1,8 @@
 include: "/views/Students.view"
 
-view: StudentDetails {
+view: NewFileExtend {
 
-  extends: [Students,Class,Section,ClassTeacher]
+  extends: [Base,Extend1,Extend2,Extend3]
 
   measure: testmeasure {
     type: number
@@ -10,23 +10,25 @@ view: StudentDetails {
   }
 }
 
-view: Marks {
+view: Link {
 
-  extends: [Students]
+  extends: [Base]
 
   dimension: TotalMarks {
     type: number
     sql:70;;
     link: {
+      label: "googleproject"
       url: "https://pantheon.corp.google.com/welcome?project=projecttwo-365317"
     }
   }
 }
 
-view: StudentMarks {
-  extends: [StudentDetails,Marks]
+view: AdditiveLink {
+  extends: [Base,Link]
   dimension: TotalMarks {
     link: {
+      label: "Hackerrank"
       url: "https://www.hackerrank.com/"
     }
   }

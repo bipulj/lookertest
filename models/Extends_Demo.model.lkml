@@ -5,10 +5,10 @@ include: "/views/StudentDetails.view.lkml"
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 
-explore: Students {}
-explore: Class {}
-explore: Section {}
-explore: ClassTeacher {}
-explore: StudentDetails {}
-explore: StudentMarks {}
-explore: Marks {}
+explore: Base {}
+explore: Extend1 {}
+explore: Extend2 {}
+explore: Extend3 {}
+explore: NewFileExtend {}
+explore: Link {}
+explore: AdditiveLink {}

@@ -1,4 +1,4 @@
-view: Students {
+view: Base {
 
   sql_table_name: `ds_looker_demo.students` ;;
 
@@ -21,8 +21,8 @@ view: Students {
 
 }
 
-view: Class {
-  extends: [Students]
+view: Extend1 {
+  extends: [Base]
 
   dimension: Class {
     type: number
@@ -30,8 +30,8 @@ view: Class {
   }
 }
 
-view: Section {
-  extends: [Students]
+view: Extend2 {
+  extends: [Base]
 
   dimension: Section {
     type: string
@@ -39,9 +39,9 @@ view: Section {
   }
 }
 
-view: ClassTeacher {
+view: Extend3 {
 
-  extends: [Students]
+  extends: [Base]
 
   dimension: ClassTeacherName {
     type: string
