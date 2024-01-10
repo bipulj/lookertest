@@ -2,7 +2,7 @@ include: "/views/Students.view"
 
 view: ClassTeacher {
 
-  extends: [Students,Class,Section]
+  extends: [Students]
 
   dimension: ClassTeacherName {
     type: string

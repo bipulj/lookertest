@@ -8,3 +8,4 @@ include: "/views/ClassTeacher.view.lkml"
 explore: Students {}
 explore: Class {}
 explore: Section {}
+explore: ClassTeacher {}
