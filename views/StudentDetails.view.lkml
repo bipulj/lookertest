@@ -2,11 +2,11 @@ include: "/views/Students.view"
 
 view: NewFileExtend {
 
-  extends: [Base,Extend1,Extend2,Extend3]
+  extends: [Base,Extend1,Extend2]
 
   measure: testmeasure {
     type: number
-    sql: ${Class}+11 ;;
+    sql: ${Id}+11 ;;
   }
 }
 

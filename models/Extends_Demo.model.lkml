@@ -8,7 +8,6 @@ include: "/views/StudentDetails.view.lkml"
 explore: Base {}
 explore: Extend1 {}
 explore: Extend2 {}
-explore: Extend3 {}
 explore: NewFileExtend {}
 explore: Link {}
 explore: AdditiveLink {}

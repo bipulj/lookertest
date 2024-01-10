@@ -10,21 +10,13 @@ view: Base {
     type: string
     sql: ${TABLE}.LastName ;;
   }
-  dimension: Address {
-    type: string
-    sql: ${TABLE}.Address ;;
-  }
-  dimension: Contact {
-    type: string
-    sql: ${TABLE}.Contact ;;
-  }
 
 }
 
 view: Extend1 {
   extends: [Base]
 
-  dimension: Class {
+  dimension: Id {
     type: number
     sql: 10;;
   }
@@ -33,18 +25,12 @@ view: Extend1 {
 view: Extend2 {
   extends: [Base]
 
-  dimension: Section {
-    type: string
-    sql: "A" ;;
-  }
+dimension: First_Name {
+  type: string
+  sql: "Extended First Name";;
 }
-
-view: Extend3 {
-
-  extends: [Base]
-
-  dimension: ClassTeacherName {
-    type: string
-    sql: "Vinita Arora" ;;
-  }
+dimension: Last_Name {
+  type: string
+  sql: "Extended Last Name";;
+}
 }
