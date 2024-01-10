@@ -21,13 +21,6 @@ view: Students {
 
 }
 
-view: ClassTeacher {
-  dimension: ClassTeacherName {
-    type: string
-    sql: "Vinita Arora" ;;
-  }
-}
-
 view: Class {
   extends: [Students]
 
