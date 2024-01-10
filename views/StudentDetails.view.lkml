@@ -10,10 +10,16 @@ view: StudentDetails {
   }
 }
 
-view: testview {
-  extends: [StudentDetails]
-  measure:  abc{
-    filters: [testmeasure: "11"]
-  }
+view: Marks {
 
+  extends: [Students]
+
+  dimension: TotalMarks {
+    type: number
+    sql:70;;
+  }
 }
+
+view: StudentMarks {
+  extends: [StudentDetails,Marks]
+  }

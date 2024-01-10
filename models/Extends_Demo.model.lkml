@@ -10,3 +10,5 @@ explore: Class {}
 explore: Section {}
 explore: ClassTeacher {}
 explore: StudentDetails {}
+explore: StudentMarks {}
+explore: Marks {}
