@@ -33,15 +33,15 @@ explore: department {
 
 explore: department_data {
   extends: [department]
-  #after extending(line 33) , the join condition in extended explore(department line:26) also needs to be mentioned (line 35)
+  #after extending(line 35) , the join condition in extended explore(department line:29) also needs to be mentioned (line 37)
   join: employee {
     sql_on: ${department_data.department_id} = ${employee.department_id} ;;
   }
   #joins beyond this are additive.
-  # join: employee_data{
-  #   sql_on: ${department_data.department_id} = ${employee_data.department__department_id} ;;
-  #   relationship:many_to_many
-  # }
+  join: employee_data{
+    sql_on: ${department_data.department_id} = ${employee_data.department__department_id} ;;
+    relationship:many_to_many
+  }
 }
 ##########################additive ends##########################
 
