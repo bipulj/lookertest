@@ -1,8 +1,9 @@
 connection: "pod2-sa-conn-test"
 
-include:"*.dashboard.lookml"
+include:"/models/*.dashboard.lookml"
 include:  "/views/department.view.lkml"              # include all views in the views/ folder in this project
 include:  "/views/employee.view.lkml"
+include:  "/views/Students.view.lkml"
 # include: "/**/*.view.lkml"                 # include all views in this project
 # include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
 # # Select the views that should be a part of this model,
@@ -21,3 +22,4 @@ include:  "/views/employee.view.lkml"
 # }
 explore: department {}
 explore: employee {}
+explore: Base {}
