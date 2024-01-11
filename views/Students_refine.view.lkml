@@ -10,4 +10,10 @@ view: students_refine {
     type: string
     sql: ${TABLE}.LastName ;;
   }
+
+  dimension: Id {
+    type: number
+    sql: 11;;
+  }
+
 }
