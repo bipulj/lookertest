@@ -16,7 +16,9 @@ view: Link {
     link: {
       label: "googleproject"
       url: "https://pantheon.corp.google.com/welcome?project=projecttwo-365317"
-    }}}
+    }
+  }
+}
 
 view: AdditiveLink {
   extends: [Base,Link]

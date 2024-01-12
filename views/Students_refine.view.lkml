@@ -11,9 +11,9 @@ view: students_refine {
     sql: ${TABLE}.LastName ;;
   }
 
-  dimension: Id {
-    type: number
-    sql: 11;;
-  }
+  # dimension: Id {
+  #   type: number
+  #   sql: 11;;
+  # }
 
 }
