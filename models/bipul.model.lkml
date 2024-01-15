@@ -1,6 +1,6 @@
 connection: "pod2-sa-conn-test"
 
-include:"/models/*.dashboard.lookml"
+#include:"/models/*.dashboard.lookml"
 include:  "/views/department.view.lkml"              # include all views in the views/ folder in this project
 include:  "/views/employee.view.lkml"
 include:  "/views/Students.view.lkml"
@@ -20,6 +20,7 @@ include:  "/views/Students.view.lkml"
 #     sql_on: ${users.id} = ${orders.user_id} ;;
 #   }
 # }
+
 explore: department {}
 explore: employee {}
 explore: Base {}

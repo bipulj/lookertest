@@ -6,7 +6,7 @@ datagroup: dg_employee_count_by_job_id {
 view: employee_count_by_job_id {
   derived_table: {
 
-     datagroup_trigger:dg_employee_count_by_job_id
+     #datagroup_trigger:dg_employee_count_by_job_id
     #increment_key: "HIRE_DATE"
 
      #sql_trigger_value:SELECT max(employee_id) FROM `projecttwo-365317.dataset_in_us.employee`;;
@@ -15,7 +15,6 @@ view: employee_count_by_job_id {
         JOB_ID AS JOB_ID,
         HIRE_DATE AS HIRE_DATE
         FROM `projecttwo-365317.dataset_in_us.employee`
-
       ;;
   }
   #sql_table_name:`dataset_in_us.employee`;;         #WHERE {% incrementcondition %} HIRE_DATE {% endincrementcondition %}
