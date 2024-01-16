@@ -1,6 +1,7 @@
 connection: "pod2-sa-conn-test"
 
 include: "/views/employee_data.view.lkml"
+include: "/views/department.view.lkml"
 
 explore: employee_data {
   query: qs_namefilter {

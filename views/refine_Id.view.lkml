@@ -7,3 +7,11 @@ view: +students_refine {
     sql: 10;;
   }
 }
+
+view: +students_refine {
+
+  dimension: Id {
+    type: number
+    sql: 11;;
+  }
+}

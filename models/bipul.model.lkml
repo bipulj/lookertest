@@ -26,6 +26,7 @@ datagroup: dg_test {
 }
 
 explore: department {}
+
 explore: employee {
   persist_with: dg_test
 }
