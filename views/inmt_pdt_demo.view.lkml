@@ -11,9 +11,9 @@ view: inmt_pdt_demo {
     datagroup_trigger:dg_inmt_pdt_demo
 
     sql: SELECT
-        idt.int_col AS "a_number",
-        idt.string_col AS "a_string",
-        DATE(idt.timestamp_col) AS "a_timestamp"
+        idt.int_col AS a_number,
+        idt.string_col AS a_string,
+        DATE(idt.timestamp_col) AS a_timestamp
         FROM `projecttwo-365317.ds_looker_demo.inmt_data_table` as idt
         WHERE {% incrementcondition %} idt.timestamp_col {%  endincrementcondition %}
 
