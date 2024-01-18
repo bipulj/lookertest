@@ -19,11 +19,6 @@ view: employee_count_by_job_id {
 
     ####persistent startegies for a PDT####
 
-  #increment_key is the parameter
-    #that makes a PDT into an incremental PDT
-      #by specifying the time increment for which fresh data should be queried and appended to the PDT.
-
-
     sql: SELECT
         EMPLOYEE_ID AS EMPLOYEE_ID,
         JOB_ID AS JOB_ID,
