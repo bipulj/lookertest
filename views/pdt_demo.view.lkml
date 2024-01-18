@@ -1,6 +1,6 @@
 datagroup: dg_employee_count_by_job_id {
   sql_trigger: SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
-  #max_cache_age: "1 minutes"
+  max_cache_age: "5 minutes"
 }
 
 ######################################### Sql Derived Table syntax #########################################
