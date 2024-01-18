@@ -24,8 +24,9 @@ view: employee_count_by_job_id {
         JOB_ID AS JOB_ID,
         HIRE_DATE AS HIRE_DATE
         FROM `projecttwo-365317.dataset_in_us.employee`
+        WHERE {% incrementcondition %} EMPLOYEE_ID {%  endincrementcondition %}
       ;;
-      #increment_key: "EMPLOYEE_ID" #"hire_date"
+      increment_key: "EMPLOYEE_ID" #"hire_date"
   }
   # Define your dimensions and measures here, like this:
   dimension: EMPLOYEE_ID {
