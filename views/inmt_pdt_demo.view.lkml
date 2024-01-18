@@ -1,5 +1,6 @@
 datagroup: dg_inmt_pdt_demo {
-  sql_trigger: SELECT count(*) FROM `projecttwo-365317.ds_looker_demo.inmt_data_table`;;
+  #sql_trigger: SELECT count(*) FROM `projecttwo-365317.ds_looker_demo.inmt_data_table`;;
+  interval_trigger: "24 hours"
   max_cache_age: "5 minutes"
 
 }
