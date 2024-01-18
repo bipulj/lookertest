@@ -18,7 +18,7 @@ view: inmt_pdt_demo {
 
     }
 
-    increment_key: "timestamp_col_date"
+    increment_key:"timestamp_col_date"
   }
   # Define your dimensions and measures here, like this:
   dimension: int_col {
