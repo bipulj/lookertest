@@ -9,9 +9,9 @@ view: employee_count_by_job_id {
 
     ####persistent startegies for a PDT####
 
-    #datagroup_trigger:dg_employee_count_by_job_id
+    datagroup_trigger:dg_employee_count_by_job_id
 
-    #sql_trigger_value:SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
+    #sql_trigger_value:SELECT max(id) FROM `projecttwo-365317.dataset_in_us.employee`;;
 
     #interval_trigger: "24 hours"
 
@@ -19,13 +19,19 @@ view: employee_count_by_job_id {
 
     ####persistent startegies for a PDT####
 
+  #increment_key is the parameter
+    #that makes a PDT into an incremental PDT
+      #by specifying the time increment for which fresh data should be queried and appended to the PDT.
+
+
     sql: SELECT
         EMPLOYEE_ID AS EMPLOYEE_ID,
         JOB_ID AS JOB_ID,
         HIRE_DATE AS HIRE_DATE
         FROM `projecttwo-365317.dataset_in_us.employee`
+        WHERE {% incrementcondition %} EMPLOYEE_ID {%  endincrementcondition %}
       ;;
-      #increment_key: "HIRE_DATE"
+      increment_key: "EMPLOYEE_ID" #"hire_date"
   }
   # Define your dimensions and measures here, like this:
   dimension: EMPLOYEE_ID {
@@ -39,6 +45,15 @@ view: employee_count_by_job_id {
     type: string
     sql: ${TABLE}.JOB_ID ;;
   }
+
+  # dimension_group: hire {
+  #   type: time
+  #   timeframes: [date, week, month, year]
+  #   datatype: date
+  #   sql:  ${TABLE}.HIRE_DATE
+  #     ;;
+  # }
+
   }
 
 
