@@ -37,7 +37,7 @@ view: inmt_pdt_demo {
   dimension_group: hire {
     type: time
     timeframes: [date, week, month, year]
-    datatype: date
+    datatype: timestamp
     sql:  ${TABLE}.a_timestamp
       ;;
   }
