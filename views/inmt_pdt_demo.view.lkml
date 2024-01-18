@@ -15,9 +15,10 @@ view: inmt_pdt_demo {
         JOB_ID AS JOB_ID,
         HIRE_DATE AS HIRE_DATE
         FROM `projecttwo-365317.ds_looker_demo.inmt_employee`
+        WHERE {% incrementcondition %} HIRE_DATE {%  endincrementcondition %}
 
       ;;
-    #increment_key: "EMPLOYEE_ID" #"hire_date" WHERE {% incrementcondition %} EMPLOYEE_ID {%  endincrementcondition %}
+    increment_key: "hire_date"  #"EMPLOYEE_ID"
   }
   # Define your dimensions and measures here, like this:
   dimension: EMPLOYEE_ID {
@@ -32,12 +33,12 @@ view: inmt_pdt_demo {
     sql: ${TABLE}.JOB_ID ;;
   }
 
-  # dimension_group: hire {
-  #   type: time
-  #   timeframes: [date, week, month, year]
-  #   datatype: date
-  #   sql:  ${TABLE}.HIRE_DATE
-  #     ;;
-  # }
+  dimension_group: hire {
+    type: time
+    timeframes: [date, week, month, year]
+    datatype: date
+    sql:  ${TABLE}.HIRE_DATE
+      ;;
+  }
 
 }
