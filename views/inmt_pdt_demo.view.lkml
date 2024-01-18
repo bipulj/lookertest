@@ -1,5 +1,5 @@
 datagroup: dg_inmt_pdt_demo {
-  sql_trigger: SELECT count(*) FROM `projecttwo-365317.ds_looker_demo.inmt_employee`;;
+  sql_trigger: SELECT count(*) FROM `projecttwo-365317.ds_looker_demo.inmt_data_table`;;
   max_cache_age: "5 minutes"
 
 }
@@ -11,11 +11,11 @@ view: inmt_pdt_demo {
     datagroup_trigger:dg_inmt_pdt_demo
 
     sql: SELECT
-        EMPLOYEE_ID AS EMPLOYEE_ID,
-        JOB_ID AS JOB_ID,
-        HIRE_DATE AS HIRE_DATE
-        FROM `projecttwo-365317.ds_looker_demo.inmt_employee`
-        WHERE {% incrementcondition %} HIRE_DATE {%  endincrementcondition %}
+        idt.int_col AS "a_number",
+        idt.string_col AS "a_string",
+        DATE(idt.timestamp_col) AS "a_timestamp"
+        FROM `projecttwo-365317.ds_looker_demo.inmt_data_table` as idt
+        WHERE {% incrementcondition %} idt.timestamp_col {%  endincrementcondition %}
 
       ;;
     increment_key: "hire_date"  #"EMPLOYEE_ID"
@@ -24,20 +24,20 @@ view: inmt_pdt_demo {
   dimension: EMPLOYEE_ID {
     description: "Emplpoyee ID"
     type: number
-    sql: ${TABLE}.EMPLOYEE_ID ;;
+    sql: ${TABLE}.a_number ;;
   }
 
-  dimension: JOB_ID {
-    description: "Job role short name"
+  dimension: JOB_NAME {
+    description: "Job role name"
     type: string
-    sql: ${TABLE}.JOB_ID ;;
+    sql: ${TABLE}.a_string ;;
   }
 
   dimension_group: hire {
     type: time
     timeframes: [date, week, month, year]
     datatype: date
-    sql:  ${TABLE}.HIRE_DATE
+    sql:  ${TABLE}.a_timestamp
       ;;
   }
 
