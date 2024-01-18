@@ -14,11 +14,11 @@ view: inmt_pdt_demo {
     explore_source: inmt_pdt_data {
         column: int_col {}
         column: string_col {}
-        column:timestamp_col {}
+        column:timestamp_col_date {}
 
     }
 
-    increment_key: "departure_date"
+    increment_key: "timestamp_col_date"
   }
   # Define your dimensions and measures here, like this:
   dimension: a_number {
@@ -29,7 +29,7 @@ view: inmt_pdt_demo {
     type: string
   }
 
-  dimension: departure_date {
+  dimension: timestamp_col_date {
     type: date
   }
 }
