@@ -21,11 +21,11 @@ view: inmt_pdt_demo {
     increment_key: "timestamp_col_date"
   }
   # Define your dimensions and measures here, like this:
-  dimension: a_number {
+  dimension: int_col {
     type: number
   }
 
-  dimension: a_string {
+  dimension: string_col {
     type: string
   }
 
