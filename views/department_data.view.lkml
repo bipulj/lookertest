@@ -144,7 +144,7 @@ view: department_data__employee {
   }
 }
 
-view: employee_data {
+view: employee_data_qs {
 
   sql_table_name: `dataset_in_us.employee_data`
   ;;
