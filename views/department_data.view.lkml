@@ -160,5 +160,12 @@ view: employee_data_qs {
     sql: ${TABLE}.LAST_NAME ;;
   }
 
+  dimension: department_id {
+    type: number
+    # hidden: yes
+    sql: ${TABLE}.DEPARTMENT_ID ;;
+  }
+
+
 
 }
