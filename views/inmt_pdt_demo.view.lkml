@@ -9,6 +9,19 @@ datagroup: dg_inmt_pdt_demo {
 view: inmt_pdt_demo {
   derived_table: {
 
+    ####persistent startegies for a PDT####
+
+    #datagroup_trigger:dg_employee_count_by_job_id
+
+    #sql_trigger_value:SELECT max(id) FROM `projecttwo-365317.dataset_in_us.employee`;;
+
+    #interval_trigger: "24 hours"
+
+    #persist_for: "24 hours"
+
+    ####persistent startegies for a PDT####
+
+
     datagroup_trigger:dg_inmt_pdt_demo
 
     explore_source: inmt_pdt_data {
