@@ -1,6 +1,7 @@
 ######################################### Sql Derived Table syntax #########################################
 datagroup: dg_employee_count_by_job_id {
   sql_trigger: SELECT count(*) FROM `projecttwo-365317.dataset_in_us.employee`;;
+
   max_cache_age: "5 minutes"
 }
 
@@ -65,13 +66,13 @@ view: employee_count_by_job_id {
 
 #     ####persistent startegies for a PDT####
 
-#     #datagroup_trigger:dg_employee_count_by_job_id
+#     # datagroup_trigger:dg_employee_count_by_job_id
 
-#     #sql_trigger_value:SELECT max(id) FROM `projecttwo-365317.dataset_in_us.employee`;;
+#     # sql_trigger_value:SELECT max(id) FROM `projecttwo-365317.dataset_in_us.employee`;;
 
-#     #interval_trigger: "24 hours"
+#     # interval_trigger: "24 hours"
 
-#     #persist_for: "24 hours"
+#     # persist_for: "24 hours"
 
 #     ####persistent startegies for a PDT####
 

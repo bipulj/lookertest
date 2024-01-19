@@ -143,3 +143,22 @@ view: department_data__employee {
     sql: ${salary} ;;
   }
 }
+
+view: employee_data {
+
+  sql_table_name: `dataset_in_us.employee_data`
+  ;;
+
+  dimension: first_name {
+    type: string
+    sql: ${TABLE}.FIRST_NAME ;;
+  }
+
+
+  dimension: last_name {
+    type: string
+    sql: ${TABLE}.LAST_NAME ;;
+  }
+
+
+}

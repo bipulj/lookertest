@@ -1,7 +1,7 @@
 connection: "pod2-sa-conn-test"
 
 include: "/views/employee_data.view.lkml"
-include: "/views/department.view.lkml"
+include: "/views/department_data.view.lkml"
 
 explore: employee_data {
   query: qs_namefilter {
@@ -17,3 +17,14 @@ explore: employee_data {
   }
 
 }
+
+# explore: department_data {
+#   extends: [employee_data]
+#   query: qs_deptnamefilter {
+#     dimensions: [department_data.department_id,department_data.department_name]
+#     label: "Quick start demo with filter on Department name"
+#     filters: [department_data.department_name: ""]
+#     #filters: [employee_data.email: ""]
+#   }
+
+# }
