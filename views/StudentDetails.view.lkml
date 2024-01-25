@@ -14,17 +14,18 @@ view: Link {
     type: number
     sql:70;;
     link: {
-      label: "googleproject"
+      label: "Report Card"
       url: "https://pantheon.corp.google.com/welcome?project=projecttwo-365317"
     }
   }
 }
 
 view: AdditiveLink {
-  extends: [Base,Link]
+  extends: [Link]
+
   dimension: TotalMarks {
     link: {
-      label: "Hackerrank"
+      label: "Marksheet"
       url: "https://www.hackerrank.com/"
     }
   }

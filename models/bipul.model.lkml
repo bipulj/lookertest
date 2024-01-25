@@ -21,6 +21,12 @@ include:  "/views/Students.view.lkml"
 #   }
 # }
 
+datagroup: test {
+  max_cache_age: "2 minutes"
+}
+
 explore: department {}
-explore: employee {}
+explore: employee {
+  persist_with: test
+}
 explore: Base {}

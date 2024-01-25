@@ -162,10 +162,6 @@ view: employee_data_qs {
 
   dimension: department_id {
     type: number
-    # hidden: yes
-    sql: ${TABLE}.DEPARTMENT_ID ;;
+    sql: ${TABLE}.DEPARTMENT.DEPARTMENT_ID ;;
   }
-
-
-
 }

@@ -10,9 +10,9 @@ include: "/views/department_data.view.lkml"
 #   description:"This is an employee detail explore"
 # }
 
-# explore: department {
-#   extends: [employee]
-# }
+# # explore: department {
+# #   extends: [employee]
+# # }
 # explore: department {
 #   extends: [employee]
 #   description:"This is a department detail explore"
@@ -37,7 +37,7 @@ include: "/views/department_data.view.lkml"
 #   }
 #   #joins beyond this are additive.
 #   join: employee_data{
-#     sql_on: ${department_data.department_id} = ${employee_data.department__department_id} ;;
+#     sql_on: ${department.department_id} = ${employee_data.department__department_id} ;;
 #     relationship:many_to_many
 #   }
 # }
